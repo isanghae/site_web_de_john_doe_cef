@@ -135,7 +135,6 @@ function Contact() {
                     <textarea
                       className="form-control"
                       id="message"
-                      type="text"
                       placeholder="Votre message"
                       style={{ height: "10rem" }}
                     ></textarea>
