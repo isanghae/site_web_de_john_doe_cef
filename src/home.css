@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .flex-lg {
+    display: flex;
+  }
+  .col {
+    flex-basis: 33.3%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex-md {
+    display: flex;
+  }
+  .col {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .flex-sm {
+    display: flex;
+  }
+  .col {
+    flex-basis: 50%;
+  }
+}
+
+.bi-github,
+.bi-twitter-x,
+.bi-linkedin {
+  color: #000000;
+  font-size: 2em;
+}
+.bi-chevron-right {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.home-container {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  );
+  height: 1000px;
+  margin-bottom: 50px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+hr {
+  background-size: 4px;
+  border-top: 4px solid #0d6efd;
+  border-color: #0d6efd;
+  opacity: 1;
+}
+@media (min-width: 1024px) {
+  header {
+    display: block;
+    background-image: url(./img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 1024px) and (min-width: 540px) {
+  header {
+    display: block;
+    background-image: url(./img/hero-bg-tablette.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 540px) {
+  header {
+    display: block;
+    background-image: url(./img/hero-bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-deskstop {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about-tablette {
+    display: none;
+  }
+  .about-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1024px) and (min-width: 540px) {
+  .about-deskstop {
+    display: none;
+  }
+  .about-tablette {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about-mobile {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .about-deskstop {
+    display: none;
+  }
+  .about-tablette {
+    display: none;
+  }
+  .about-mobile {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1024px) and (min-width: 540px) {
+  .card {
+    display: block;
+    height: 50%;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .card {
+    display: block;
+    height: 30%;
+    width: 30%;
+    margin-bottom: 30px;
+  }
+}
+a {
+  text-decoration: none;
+}
