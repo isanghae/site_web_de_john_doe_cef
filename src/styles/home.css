@@ -1,0 +1,145 @@
+*{
+  box-sizing: border-box;
+} 
+
+@media (min-width: 1024px) {
+    .info-container {
+      background-image: url(../assets/hero-bg.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+    .info-container-black{
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 540px) {
+    .info-container {
+      background-image: url(../assets/hero-bg-tablette.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+    .info-container-black{
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media (max-width: 540px) {
+    .info-container {
+      background-image: url(../assets/hero-bg-mobile.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+    .info-container-black{
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .about-deskstop {
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .about-tablette {
+      display: none;
+    }
+    .about-mobile {
+      display: none;
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 540px) {
+    .about-deskstop {
+      display: none;
+    }
+    .about-tablette {
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .about-mobile {
+      display: none;
+    }
+  }
+  @media (max-width: 540px) {
+    .about-deskstop {
+      display: none;
+    }
+    .about-tablette {
+      display: none;
+    }
+    .about-mobile {
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* .card-group{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+    background-color: white;
+  }
+  
+  .propos{
+    padding-bottom: 280px;
+    padding-left: 10px;
+    text-align: justify;
+    font-size: large;
+    margin-bottom: 30px;
+    padding-right: 20px;
+  }
+   */
+  @media (min-width: 1024px) {
+    .card-about {
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 30px;
+      padding-right: 20px;
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 540px) {
+    .card-about {
+      display: block;
+      height: 50%;
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 540px) {
+    .card-about {
+      display: block;
+      height: 30%;
+      width: 30%;
+      margin-bottom: 30px;
+    }
+  }
+  a {
+    text-decoration: none;
+  } 

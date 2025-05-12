@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+  @media screen and (min-width: 1024px) {
+    .flex-lg {
+      display: flex;
+    }
+    .col {
+      flex-basis: 33.3%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .flex-md {
+      display: flex;
+    }
+    .col {
+      flex-basis: 50%;
+    }
+  }
+  @media screen and (max-width: 540px) {
+    .flex-sm {
+      display: flex;
+    }
+    .col {
+      flex-basis: 50%;
+    }
+  }
+.nav-link-item{
+    text-decoration: none;
+    transform: uppercase;
+    color:grey;
+    margin-right: 20px;
+}
+.nav-link-item:hover{
+    color: white;
+}
