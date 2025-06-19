@@ -4,41 +4,56 @@ import Navigation from "../components/Navigation";
 import "../styles/home.css";
 import { CardBody, CardGroup, Col, Container } from "react-bootstrap";
 
-
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 function Home() {
-    return (
-      <>
-        <Navigation />
-          <div className="info-container"></div>
-          <div className="info-container-black"></div>
-          <Container fluid className="d-flex flex-column justify-content-center align-items-center">
-          <Col className="col">
-            <h1>Bonjour, je suis John Doe</h1>
-            <h2>Développeur web full stack</h2>
-            <Button variant="primary" href="#a_propos" className="p-2 mx-auto">En savoir plus</Button>
-          </Col>
-          <CardGroup className="card-group mb-5 m-auto py-4 shadow p-4 rounded">
-            <CardBody className="card propos col-md-2 border border-0">
-              <h3 id="a_propos">À propos</h3>
-              <hr />
-              <p>
-                Passionné par l'informatique et les nouvelles technologies, j'ai
-                suivi une formation <b>d'intégrateur-développeur web</b> au CEF.
-                Au cours de cette formation, j'ai pu acquérir des bases solides
-                pour travailler dans le domaine du <b>développement web.</b>
-              </p>
-              <p>
-                Basé à Lyon, je suis en recherche d'une alternance au sein d'une
-                agence digitale pour consolider ma formation de{" "}
-                <b>développeur web full stack.</b>
-              </p>
-              <p>
-                J'accorde une attention particulière à la qualité du code que
-                j'écris et je respecte les bonnes pratiques du web.
-              </p>
-            </CardBody>
-            <CardBody className="card card-about col-md-4 border border-0">
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [githubUser, setGithubUser] = useState(null);
+
+  const fetchGithubUser = async () => {
+    try {
+      console.log("bouton cliqué");
+      const res = await fetch(`https://api.github.com/users/github-john-doe`);
+      const data = await res.json();
+      setGithubUser(data);
+      setIsModalOpen(true);
+    } catch (error) {
+      console.error('Erreur fetch GitHub:', error);
+    }
+  };
+
+  return (
+    <>
+      <Navigation activekey="home" />
+      <div className="info-container"></div>
+      <div className="info-container-black"></div>
+      <Container fluid className="d-flex flex-column justify-content-center align-items-center">
+        <Col className="col-titre">
+          <h1>Bonjour, je suis John Doe</h1>
+          <h2>Développeur web full stack</h2>
+          <Button variant="primary" onClick={fetchGithubUser} className="p-2 mx-auto">En savoir plus</Button>
+        </Col>
+        <CardGroup className="card-group home-group mb-5 m-auto py-4 shadow p-4 rounded">
+          <CardBody className="card propos col-md-2 border border-0">
+            <h3 id="a_propos">À propos</h3>
+            <p>
+              Passionné par l'informatique et les nouvelles technologies, j'ai
+              suivi une formation <b>d'intégrateur-développeur web</b> au CEF.
+              Au cours de cette formation, j'ai pu acquérir des bases solides
+              pour travailler dans le domaine du <b>développement web.</b>
+            </p>
+            <p>
+              Basé à Lyon, je suis en recherche d'une alternance au sein d'une
+              agence digitale pour consolider ma formation de{" "}
+              <b>développeur web full stack.</b>
+            </p>
+            <p>
+              J'accorde une attention particulière à la qualité du code que
+              j'écris et je respecte les bonnes pratiques du web.
+            </p>
+          </CardBody>
+          <CardBody className="card card-about col-md-4 border border-0">
             <img
               src="./src/assets/john-doe-about.jpg"
               alt="une photo de John Doe"
@@ -54,7 +69,7 @@ function Home() {
               alt="une photo de John Doe"
               className="about-mobile"
             ></img>
-            <h3>Mes compétences</h3>
+            <h3 style={{fontWeight:"bold"}}>Mes compétences</h3>
             <p className="my-2">HTML 90%</p>
             <div className="progress">
               <div
@@ -110,12 +125,16 @@ function Home() {
                 aria-valuemax="100"
               ></div>
             </div>
-            </CardBody>
-          </CardGroup>
-        </Container>
-        <Footer />
-      </>
-    );
-  }
+          </CardBody>
+        </CardGroup>
+      </Container>
+      <Footer />
+
+       {isModalOpen && githubUser && (
+        <Modal data={githubUser} onClose={() => setIsModalOpen(false)} />
+      )}
+    </>
+  );
+}
   
   export default Home;

@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+.mentions{
+  border-bottom: solid #0d6efd 3px;
+  line-height: 2;
+  font-weight: bold;
+  width: 500px;
+  margin: 60px auto 20px auto;
+  text-align: center;
+}

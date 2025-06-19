@@ -4,20 +4,21 @@ import "../styles/realisations.css";
 import FreshFood from "../assets/portfolio/fresh-food.jpg";
 import BienEtre from "../assets/portfolio/espace-bien-etre.jpg";
 import Akira from "../assets/portfolio/restaurant-japonais.jpg";
-import { Card, CardBody, CardFooter, CardGroup, CardText, Col, Container, Row, Stack } from "react-bootstrap";
+import { Card, CardBody, CardFooter, CardText, Col, Container, Row } from "react-bootstrap";
 
 
 function Realisations() {
-    return (
-      <>
-      <Navigation />
-      <Container fluid className="background d-flex row justify-content-center align-items-start p-3">
-        <Col className="titres text-center">
-          <h1 className="text-uppercase" style={{marginTop: "50px"}}>Portfolio</h1>
-          <span>Voici quelques-unes de mes réalisations.</span>
-          <hr className="mx-auto" style={{color: "#0d6efd", width:"300px"}}/>
-        </Col>
-        <Stack direction="horizontal" gap={3}>
+  return (
+    <>
+    <Navigation activekey="realisations"/>
+    <div className="banners"></div>
+    <Container fluid className="background d-flex row justify-content-center align-items-start p-3">
+      <Col className="titres text-center">
+        <h1 className="text-uppercase">Portfolio</h1>
+        <span className="supplement">Voici quelques-unes de mes réalisations.</span>
+      </Col>
+      <Row>
+        <Col lg="4" md="12" sm="12">
           <Card className="card">
             <img
               className="card-img-top"
@@ -43,6 +44,8 @@ function Realisations() {
               </time>
             </CardFooter>
           </Card>
+        </Col>
+        <Col lg="4" md="12" sm="12">
           <Card className="card">
             <img
               className="card-img-top"
@@ -66,6 +69,8 @@ function Realisations() {
               </time>
             </CardFooter>
           </Card>
+        </Col>
+        <Col lg="4" md="12" sm="12">
           <Card className="card">
             <img
               className="card-img-top"
@@ -90,10 +95,11 @@ function Realisations() {
               <time dateTime="2022-08-01">Site réalisé en HTML/CSS</time>
             </CardFooter>
           </Card>
-        </Stack>
-      </Container>
-      <Footer />
-      </>
-      );
-  }
+        </Col>
+      </Row>
+    </Container>
+    <Footer />
+    </>
+    );
+}
   export default Realisations;

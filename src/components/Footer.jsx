@@ -3,15 +3,16 @@
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
  import Chevron from "../assets/chevron.png";
+ import "../styles/footer.css";
 
  function Footer() {
-     return (
-       <>
+    return (
+        <>
         <footer>
         <Container fluid >
             <Row className="footer-container bg-light text-black p-4">
-                <Col lg="3" className="footer-content">
-                    <h4>John Doe</h4>
+                <Col lg="3" md="6" sm="12" className="footer-content">
+                    <h4><strong>John Doe</strong></h4>
                     <address>
                     40 rue Laure Diebold <br />
                     69009 Lyon, France <br />
@@ -35,9 +36,9 @@
                         </li>
                     </ul>
                 </Col>
-                <Col lg="3" className="footer-content">
+                <Col lg="3" md="6" sm="12" className="footer-content">
                     <Col className="flex-column">
-                    <h4>Liens utiles</h4>
+                    <h4><strong>Liens utiles</strong></h4>
                         <NavLink
                         className="text-body"
                         to="/"
@@ -85,9 +86,9 @@
                         </NavLink>
                     </Col>
                 </Col>
-                <Col lg="3" className="footer-content">
+                <Col lg="3" md="6" sm="12" className="footer-content">
                     <Col className="flex-column">
-                    <h4>Mes dernières réalisations</h4>
+                    <h4><strong>Mes dernières réalisations</strong></h4>
                         <NavLink
                         className="text-body "
                         target="_blank"
@@ -117,9 +118,9 @@
                         </NavLink>
                     </Col>
                 </Col>
-                <Col lg="3" className="footer-content">
+                <Col lg="3" md="6" sm="12" className="footer-content">
                     <Col className="flex-column">
-                    <h4>Mes derniers articles</h4>
+                    <h4><strong>Mes derniers articles</strong></h4>
                         <NavLink
                         className="text-body "
                         target="_blank"
@@ -161,12 +162,12 @@
                 className="top-page text-end p-3"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.911)" }}
                 >
-                <a href="#top">Haut de page ↑</a>
+                <a href="#top" className="haut">Haut de page ↑</a>
                 </div>
             </Row>
-         </Container>
+            </Container>
             </footer>
-       </>
+        </>
      );
  }
 
